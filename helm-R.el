@@ -112,6 +112,8 @@
                      (ess-execute (concat "tail(" obj-name ", n = 10)\n") nil (concat "R tail: " obj-name))))
          ("print" . (lambda(obj-name)
                       (ess-execute (concat "print(" obj-name ")\n") nil (concat "R object: " obj-name))))
+	 ("epicalc::des" . (lambda(obj-name)
+			     (ess-execute (concat "des(" obj-name ")\n") nil (concat "Epicalc des: " obj-name))))
          ("dput" . (lambda(obj-name)
                      (ess-execute (concat "dput(" obj-name ")\n") nil (concat "R dput: " obj-name)))))
         (volatile)))
