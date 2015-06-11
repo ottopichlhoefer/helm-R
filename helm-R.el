@@ -106,14 +106,22 @@
                         (ess-execute (concat "summary(" obj-name ")\n") nil (concat "R summary: " obj-name))))
          ("head (10)" . (lambda(obj-name)
                           (ess-execute (concat "head(" obj-name ", n = 10)\n") nil (concat "R head: " obj-name))))
-         ("head (100)" . (lambda(obj-name)
-                           (ess-execute (concat "head(" obj-name ", n = 100)\n") nil (concat "R head: " obj-name))))
+         ;; ("head (100)" . (lambda(obj-name)
+         ;;                   (ess-execute (concat "head(" obj-name ", n = 100)\n") nil (concat "R head: " obj-name))))
          ("tail" . (lambda(obj-name)
                      (ess-execute (concat "tail(" obj-name ", n = 10)\n") nil (concat "R tail: " obj-name))))
          ("print" . (lambda(obj-name)
                       (ess-execute (concat "print(" obj-name ")\n") nil (concat "R object: " obj-name))))
-	 ("epicalc::des" . (lambda(obj-name)
-			     (ess-execute (concat "des(" obj-name ")\n") nil (concat "Epicalc des: " obj-name))))
+
+	 ("frequencies \t  sjPlot::sjt.frq" . (lambda(obj-name)
+			     (ess-execute (concat "sjPlot::sjt.frq(" obj-name ")\n") nil (concat "sjt.frqs: " obj-name))))
+	 ("dataframe \t  sjPlot::sjt.df" . (lambda(obj-name)
+			     (ess-execute (concat "sjPlot::sjt.df(" obj-name ")\n") nil (concat "sjt.df: " obj-name))))
+
+	 
+	 ("description \t  epicalc::des" . (lambda(obj-name)
+			     (ess-execute (concat "epicalc::des(" obj-name ")\n") nil (concat "Epicalc des: " obj-name))))
+
          ("dput" . (lambda(obj-name)
                      (ess-execute (concat "dput(" obj-name ")\n") nil (concat "R dput: " obj-name)))))
         (volatile)))
