@@ -116,7 +116,6 @@
 			     (ess-execute (concat "sjPlot::sjt.frq(" obj-name ")\n") nil (concat "sjt.frqs: " obj-name))))
 	 ("dataframe \t  sjPlot::sjt.df" . (lambda(obj-name)
 			     (ess-execute (concat "sjPlot::sjt.df(" obj-name ")\n") nil (concat "sjt.df: " obj-name))))
-
 	 ("description \t  epicalc::des" . (lambda(obj-name)
 					     (ess-execute (concat "epicalc::des(" obj-name ")\n") nil (concat "Epicalc des: " obj-name))))
  	 ("summ \t\t  epicalc::summ" . (lambda(obj-name)
